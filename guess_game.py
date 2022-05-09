@@ -4,6 +4,12 @@ import random
 
 
 
+def warning():
+    if z > 50 or z < 1:
+        print("Your input doesn't match with the range of number of this game.")
+    if z != int():
+        print("Hey! you are suppose to type integer number.")
+
 def to_infinity():
     index = 0
     while True:
@@ -38,19 +44,18 @@ The certain rules of this game are:
                     print("Yah! you won the game.")
                     break
                 elif z != a :
+                    warning()
                     compare(z,a)
                     print("Try left:", (6 - i))
             break
         except:
-            print("OOPs! Ypu lost the game.")
+            if z != int():
+                    print("Hey! you are suppose to type integer number.")
+            print("OOPs! You lost the game.")
         finally:
-            if z != a:
+            if z != a and z == int():
                 print("OOPs! You exceed your limit.")
             print("Hope to se you again.")
-        try:
-            if z != int(z):
-                print("Hey! you are suppose to type integer number.")
-        except:
             break
     elif c == "no":
         print("Ok! See you next time.")
@@ -60,7 +65,6 @@ The certain rules of this game are:
         c = input("Type yes or no: ").lower()
     if i == 3:
         continue
-
 
 
 
