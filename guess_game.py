@@ -1,3 +1,9 @@
+
+
+import random
+
+
+
 def to_infinity():
     index = 0
     while True:
@@ -16,12 +22,12 @@ c = input("Type yes or no: ").lower()
 for i in to_infinity():
     if c == "yes":
         print('''Okey then user! 
-        This is a new game "Guess the number" 
-        The certain rules of this game are:
-         1. There is a secret number between 1-50, which you have to guess.
-         2. you will be given 7 chance to guess the number.
-         3. After each of your attempt you will be given the hint weather your inputted number is larger or smaller than the secret number.
-         4. If you print any other type of data-type other than 'integer' you will lost the game. ''')
+This is a new game "Guess the number" 
+The certain rules of this game are:
+    1. There is a secret number between 1-50, which you have to guess.
+    2. you will be given 7 chance to guess the number.
+    3. After each of your attempt you will be given the hint weather your inputted number is larger or smaller than the secret number.
+    4. If you print any other type of data-type other than 'integer' you will lost the game. ''')
         a = 21
         print("Let's start the game.")
         try:
@@ -33,9 +39,13 @@ for i in to_infinity():
                     break
                 elif z != a :
                     compare(z,a)
+                    print("Try left:", (6 - i))
+            break
         except:
             print("OOPs! Ypu lost the game.")
         finally:
+            if z != a:
+                print("OOPs! You exceed your limit.")
             print("Hope to se you again.")
         try:
             if z != int(z):
@@ -50,6 +60,7 @@ for i in to_infinity():
         c = input("Type yes or no: ").lower()
     if i == 3:
         continue
+
 
 
 
